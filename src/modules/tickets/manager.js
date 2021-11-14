@@ -91,7 +91,7 @@ module.exports = class TicketManager extends EventEmitter {
 			const embed = new MessageEmbed()
 				.setColor(settings.colour)
 				.setAuthor(creator.user.username, creator.user.displayAvatarURL())
-				.setDescription(description)
+				.setDescription('test desc')
 				.setFooter(settings.footer, guild.iconURL());
 
 			if (topic) embed.addField(i18n('ticket.opening_message.fields.topic'), topic);

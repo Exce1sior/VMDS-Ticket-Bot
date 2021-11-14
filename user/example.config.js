@@ -22,7 +22,7 @@ module.exports = {
 		colour: '#009999',
 		log_messages: true,
 		name_format: 'ticket-{number}',
-		opening_message: 'Hello {name}, thank you for creating a ticket. A member of staff will soon be available to assist you.\n\n__All messages in this channel are stored for future reference.__'
+		opening_message: 'Hello {name}, thank you for creating a ticket. A member of staff will soon be available to assist you.'
 	},
 	developer: { debug: false },
 	locale: 'en-GB',

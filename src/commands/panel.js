@@ -166,9 +166,20 @@ module.exports = class PanelCommand extends Command {
 						new MessageActionRow()
 							.addComponents(
 								new MessageButton()
-									.setCustomId(`panel.single:${categories[0]}`)
-									.setLabel(i18n('panel.create_ticket'))
+									.setCustomId(`panel.single:${categories[0]}:severity1`)
+									.setLabel('Report a member')
 									.setStyle('PRIMARY')
+									.setEmoji('🚨'),
+								new MessageButton()
+									.setCustomId(`panel.single:${categories[0]}:severity2`)
+									.setLabel('Copyright claim')
+									.setStyle('SECONDARY')
+									.setEmoji('🎵'),
+								new MessageButton()
+									.setCustomId(`panel.single:${categories[0]}:severity3`)
+									.setLabel('Something else')
+									.setStyle('SECONDARY')
+									.setEmoji('❔')
 							)
 					],
 					embeds: [embed]
