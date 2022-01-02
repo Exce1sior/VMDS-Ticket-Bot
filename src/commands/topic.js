@@ -64,8 +64,8 @@ module.exports = class TopicCommand extends Command {
 				new MessageEmbed()
 					.setColor(settings.colour)
 					.setAuthor(member.user.username, member.user.displayAvatarURL())
-					.setDescription('description')
-					.addField(('TEST'), topic)
+					.setDescription(description)
+					.addField(i18n('ticket.opening_message.fields.topic'), topic)
 					.setFooter(settings.footer, interaction.guild.iconURL())
 			]
 		});
