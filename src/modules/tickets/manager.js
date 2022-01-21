@@ -7,9 +7,9 @@ const {
 	MessageEmbed
 } = require('discord.js');
 
-if (1 === 1) {
+if (category_id === 1) {
 	const msg_content = 'ticket.opening_message.content1'
-} else if (1 === 2) {
+} else if (category_id === 2) {
 	const msg_content = 'ticket.opening_message.content2'
 } else {
 	const msg_content = 'ticket.opening_message.content10'
