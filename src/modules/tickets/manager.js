@@ -7,6 +7,14 @@ const {
 	MessageEmbed
 } = require('discord.js');
 
+if (1 === 1) {
+	const msg_content = 'ticket.opening_message.content1'
+} else if (1 === 2) {
+	const msg_content = 'ticket.opening_message.content2'
+} else {
+	const msg_content = 'ticket.opening_message.content10'
+}
+
 /** Manages tickets */
 module.exports = class TicketManager extends EventEmitter {
 	/**
@@ -85,7 +93,7 @@ module.exports = class TicketManager extends EventEmitter {
 				await t_channel.send({ content: cat_row.image });
 			}
 
-			const description = cat_row.opening_message
+			const description =  cat_row.opening_message
 				.replace(/{+\s?(user)?name\s?}+/gi, creator.displayName)
 				.replace(/{+\s?(tag|ping|mention)?\s?}+/gi, creator.user.toString());
 			const embed = new MessageEmbed()
@@ -126,9 +134,10 @@ module.exports = class TicketManager extends EventEmitter {
 						: `<@&${id}>`)
 					.join(', ')
 				: '';
-			const sent = await t_channel.send({
+			
+			const sent = await t_channel.send({ // controls ping
 				components: cat_row.claiming || settings.close_button ? [components] : [],
-				content: i18n('ticket.opening_message.content', mentions, creator.user.toString()),
+				content: i18n(msg_content, mentions, creator.user.toString()),
 				embeds: [embed]
 			});
 			await sent.pin({ reason: 'Ticket opening message' });

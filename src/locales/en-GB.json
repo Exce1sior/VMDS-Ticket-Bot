@@ -582,7 +582,9 @@
 			"title": "Member removed"
 		},
 		"opening_message": {
-			"content": "%s\n%s has created a new ticket",
+			"content1": "%s\n%s has created a new ticket",
+			"content2": "Woah this is a cool test!!!!!",
+			"content10": "WOW LOOK AT THIS!",
 			"fields": {
 				"topic": "Topic"
 			}
