@@ -28,7 +28,7 @@
 
 <br>
 
-![Discord Tickets](https://img.eartharoid.me/insecure/plain/https://static.eartharoid.me/discord-tickets/logo/wordmark/gradient.png@png)
+![Discord Tickets](https://img.eartharoid.me/insecure/plain/https://static.eartharoid.me/discord-tickets/logo/wordmark/gradient-by-eartharoid.png@png)
 
 An open-source ticket management bot for Discord - a free alternative to the premium and white-label plans of other popular ticketing bots.
 
@@ -127,7 +127,6 @@ Thank you to everyone to has contributed to Discord Tickets, including everyone 
 **These awesome people and communities sponsor Discord Tickets:**
 
 - [reSkybounds](https://reskybounds.com/) ([Discord](https://discord.reskybounds.com/))
-- [Cal#0004](https://discord.com/users/239036926152146944) <!-- @24c4 -->
 - [thephilluk#0204](https://discord.com/users/166187860968472577) <!-- @thephilluk -->
 
 ### Donate
