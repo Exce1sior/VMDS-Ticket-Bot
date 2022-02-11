@@ -30,7 +30,7 @@ module.exports = ({ config }, sequelize) => {
 			type: DataTypes.STRING
 		},
 		footer: {
-			defaultValue: 'Discord Tickets by eartharoid',
+			defaultValue: 'Default footer much? How did this happen?!',
 			type: DataTypes.STRING
 		},
 		id: {

@@ -154,7 +154,7 @@
 						"confirm": "Close"
 					},
 					"description": "Please confirm your decision.",
-					"description_with_archive": "The ticket will be archived for future reference.",
+					"description_with_archive": "Please confirm your decision.",
 					"title": "❔ Are you sure?"
 				},
 				"confirm_multiple": {
@@ -383,7 +383,7 @@
 									"name": "name"
 								},
 								"name_format": {
-									"description": "The ticket name format",
+									"description": "The ticket name format (use {num} and {name} as variables)",
 									"name": "name_format"
 								},
 								"opening_message": {
@@ -391,7 +391,7 @@
 									"name": "opening_message"
 								},
 								"opening_questions": {
-									"description": "Questions to ask when a ticket is opened.",
+									"description": "Questions to ask when a ticket is opened, [\"q1\", \"q2\", ...]",
 									"name": "opening_questions"
 								},
 								"ping": {
@@ -582,9 +582,7 @@
 			"title": "Member removed"
 		},
 		"opening_message": {
-			"content1": "%s\n%s has created a new ticket",
-			"content2": "Woah this is a cool test!!!!!",
-			"content10": "WOW LOOK AT THIS!",
+			"content": "%s\n%s has created a new ticket!",
 			"fields": {
 				"topic": "Topic"
 			}

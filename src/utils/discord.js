@@ -31,7 +31,7 @@ module.exports = class DiscordUtils {
 	}
 
 	/**
-	 * Fet a guild's settings
+	 * Fetch a guild's settings
 	 * @param {string} id - The guild's ID
 	 * @returns {Promise<Model>}
 	 */

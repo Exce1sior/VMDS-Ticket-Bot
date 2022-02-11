@@ -194,7 +194,7 @@ module.exports = class PanelCommand extends Command {
 							.addComponents(
 								new MessageSelectMenu()
 									.setCustomId(`panel.multiple:${panel_channel.id}`)
-									.setPlaceholder('First, Select a category')
+									.setPlaceholder('Select a ticket category')
 									.addOptions(rows.map(row => ({
 										label: row.name,
 										value: row.id

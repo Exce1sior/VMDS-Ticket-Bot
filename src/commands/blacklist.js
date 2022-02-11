@@ -64,7 +64,7 @@ module.exports = class BlacklistCommand extends Command {
 			const member_or_role = interaction.options.getMentionable(default_i18n('commands.blacklist.options.add.options.member_or_role.name'));
 			const type = member_or_role instanceof Role ? 'role' : 'member';
 
-			if (type === 'member' && await this.client.utils.isStaff(member_or_role)) {
+			if (type === 'member' && this.client.utils.isStaff(member_or_role)) {
 				return await interaction.reply({
 					embeds: [
 						new MessageEmbed()

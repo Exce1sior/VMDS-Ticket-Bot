@@ -6,16 +6,9 @@ const {
 	MessageButton,
 	MessageEmbed
 } = require('discord.js');
+const { CommandInteractionOptionResolver } = require('discord.js');
 
-if (category_id === 1) {
-	const msg_content = 'ticket.opening_message.content1'
-} else if (category_id === 2) {
-	const msg_content = 'ticket.opening_message.content2'
-} else {
-	const msg_content = 'ticket.opening_message.content10'
-}
-
-/** Manages tickets */
+	/** Manages tickets */
 module.exports = class TicketManager extends EventEmitter {
 	/**
 	 * Create a TicketManager instance
@@ -38,7 +31,8 @@ module.exports = class TicketManager extends EventEmitter {
 	 * @param {string} creator_id - ID of the ticket creator (user)
 	 * @param {string} category_id - ID of the ticket category
 	 * @param {string} [topic] - The ticket topic
-	 */
+	 */ 
+
 	async create(guild_id, creator_id, category_id, topic) {
 		if (!topic) topic = '';
 
@@ -93,7 +87,7 @@ module.exports = class TicketManager extends EventEmitter {
 				await t_channel.send({ content: cat_row.image });
 			}
 
-			const description =  cat_row.opening_message
+			const description = cat_row.opening_message
 				.replace(/{+\s?(user)?name\s?}+/gi, creator.displayName)
 				.replace(/{+\s?(tag|ping|mention)?\s?}+/gi, creator.user.toString());
 			const embed = new MessageEmbed()
@@ -134,10 +128,20 @@ module.exports = class TicketManager extends EventEmitter {
 						: `<@&${id}>`)
 					.join(', ')
 				: '';
+
+			if (category_id === '934566017533898832') {
+				var msg_content = 'ticket.opening_message.content1';
+			} else if (category_id === '934566361882066974') {
+				var msg_content = 'ticket.opening_message.content2';
+			} else if (category_id === '934566473429573723'){
+				var msg_content = 'ticket.opening_message.content3';
+			} else {
+				var msg_content = 'ticket.opening_message.content4';
+			}
 			
-			const sent = await t_channel.send({ // controls ping
+			const sent = await t_channel.send({
 				components: cat_row.claiming || settings.close_button ? [components] : [],
-				content: i18n(msg_content, mentions, creator.user.toString()),
+				content: i18n('ticket.opening_message.content', mentions, creator.user.toString()),
 				embeds: [embed]
 			});
 			await sent.pin({ reason: 'Ticket opening message' });

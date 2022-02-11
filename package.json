@@ -36,6 +36,7 @@
 		"cryptr": "^6.0.2",
 		"discord.js": "^13.2.0",
 		"dotenv": "^8.6.0",
+		"dsctickets.text-transcripts": "file:../text-transcripts",
 		"keyv": "^4.0.3",
 		"leeks.js": "^0.2.4",
 		"leekslazylogger": "^3.0.2",
@@ -44,13 +45,14 @@
 		"node-fetch": "^2.6.5",
 		"semver": "^7.3.5",
 		"sequelize": "^6.6.5",
+		"sqlite": "^4.0.23",
 		"terminal-link": "^2.1.1"
 	},
 	"devDependencies": {
 		"all-contributors-cli": "^6.20.0",
 		"eslint": "^7.32.0",
 		"mariadb": "^2.5.4",
-		"mysql2": "^2.3.2",
+		"mysql2": "^2.3.3",
 		"nodemon": "^2.0.13",
 		"pg": "^8.7.1",
 		"pg-hstore": "^2.3.4",
