@@ -131,13 +131,13 @@ module.exports = class InteractionCreateEventListener extends EventListener {
 				if (!(await this.client.utils.isStaff(interaction.member))) return;
 				const t_row = await this.client.db.models.Ticket.findOne({ where: { id: interaction.channel.id } });
 				await t_row.update({ claimed_by: interaction.user.id });
-				await interaction.channel.permissionOverwrites.edit(interaction.user.id, { VIEW_CHANNEL: true }, `Ticket claimed by ${interaction.user.tag}`);
+				//await interaction.channel.permissionOverwrites.edit(interaction.user.id, { VIEW_CHANNEL: true }, `Ticket claimed by ${interaction.user.tag}`);
 
 				const cat_row = await this.client.db.models.Category.findOne({ where: { id: t_row.category } });
 
-				for (const role of cat_row.roles) {
-					await interaction.channel.permissionOverwrites.edit(role, { VIEW_CHANNEL: false }, `Ticket claimed by ${interaction.user.tag}`);
-				}
+				//for (const role of cat_row.roles) {
+					//await interaction.channel.permissionOverwrites.edit(role, { VIEW_CHANNEL: false }, `Ticket claimed by ${interaction.user.tag}`);
+				//}
 
 				this.client.log.info(`${interaction.user.tag} has claimed "${interaction.channel.name}" in "${interaction.guild.name}"`);
 
@@ -181,13 +181,13 @@ module.exports = class InteractionCreateEventListener extends EventListener {
 				const t_row = await this.client.db.models.Ticket.findOne({ where: { id: interaction.channel.id } });
 				await t_row.update({ claimed_by: null });
 
-				await interaction.channel.permissionOverwrites.delete(interaction.user.id, `Ticket released by ${interaction.user.tag}`);
+				//await interaction.channel.permissionOverwrites.delete(interaction.user.id, `Ticket released by ${interaction.user.tag}`);
 
 				const cat_row = await this.client.db.models.Category.findOne({ where: { id: t_row.category } });
 
-				for (const role of cat_row.roles) {
-					await interaction.channel.permissionOverwrites.edit(role, { VIEW_CHANNEL: true }, `Ticket released by ${interaction.user.tag}`);
-				}
+				//for (const role of cat_row.roles) {
+					//await interaction.channel.permissionOverwrites.edit(role, { VIEW_CHANNEL: true }, `Ticket released by ${interaction.user.tag}`);
+				//}
 
 				this.client.log.info(`${interaction.user.tag} has released "${interaction.channel.name}" in "${interaction.guild.name}"`);
 
