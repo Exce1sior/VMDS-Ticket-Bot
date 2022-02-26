@@ -474,7 +474,7 @@
 			"name": "stats",
 			"response": {
 				"global": {
-					"description": "Statistics about ticket across all guilds where this instan is used.",
+					"description": "Statistic about ticket across all guilds where this instan is used.",
 					"title": "📊 Global stats"
 				},
 				"guild": {
