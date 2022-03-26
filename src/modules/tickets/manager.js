@@ -37,6 +37,7 @@ module.exports = class TicketManager extends EventEmitter {
 		if (!topic) topic = '';
 
 		const cat_row = await this.client.db.models.Category.findOne({ where: { id: category_id } });
+		category_id = 'channel id here'
 
 		if (!cat_row) throw new Error('Ticket category does not exist');
 
