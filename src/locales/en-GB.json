@@ -125,7 +125,7 @@
 					"name": "ticket"
 				},
 				"time": {
-					"description": "Close all tickets that have been inactive for the specified time (in ms)",
+					"description": "Close all tickets that have been inactive for the specified time (in milliseconds)",
 					"name": "time"
 				}
 			},
