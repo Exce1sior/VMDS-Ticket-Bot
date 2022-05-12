@@ -198,8 +198,8 @@
 			}
 		},
 		"help": {
-			"description": "List the commands you have access to",
-			"name": "help",
+			"description": "List the ticket commands you have access to",
+			"name": "ticket-help",
 			"response": {
 				"list": {
 					"description": "The commands you have access to are listed below. To create a ticket, type **`/new`**.",
