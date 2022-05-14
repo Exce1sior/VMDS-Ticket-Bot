@@ -46,7 +46,7 @@
 			}
 		},
 		"blacklist": {
-			"description": "View or modify the blacklist",
+			"description": "[Support tickets] View or modify the blacklist",
 			"name": "blacklist",
 			"options": {
 				"add": {
@@ -113,7 +113,7 @@
 			}
 		},
 		"close": {
-			"description": "Close a ticket channel",
+			"description": "[Support tickets] Close a ticket channel",
 			"name": "close",
 			"options": {
 				"reason": {
@@ -198,8 +198,8 @@
 			}
 		},
 		"help": {
-			"description": "List the ticket commands you have access to",
-			"name": "ticket-help",
+			"description": "[Support tickets] List the ticket commands you have access to",
+			"name": "support-help",
 			"response": {
 				"list": {
 					"description": "The commands you have access to are listed below. To create a ticket, type **`/new`**.",
@@ -211,7 +211,7 @@
 			}
 		},
 		"new": {
-			"description": "Create a new ticket",
+			"description": "[Support tickets] Create a new ticket",
 			"name": "new",
 			"options": {
 				"topic": {
@@ -326,7 +326,7 @@
 			}
 		},
 		"settings": {
-			"description": "Configure Discord Tickets",
+			"description": "Configure support tickets",
 			"name": "settings",
 			"options": {
 				"categories": {
@@ -334,7 +334,7 @@
 					"name": "categories",
 					"options": {
 						"create": {
-							"description": "Create a new category",
+							"description": "[Support tickets] Create a new category",
 							"name": "create",
 							"options": {
 								"name": {
@@ -348,7 +348,7 @@
 							}
 						},
 						"delete": {
-							"description": "Delete a category",
+							"description": "[Support tickets] Delete a category",
 							"name": "delete",
 							"options": {
 								"id": {
@@ -358,7 +358,7 @@
 							}
 						},
 						"edit": {
-							"description": "Make changes to a category's configuration",
+							"description": "[Support tickets] Make changes to a category's configuration",
 							"name": "edit",
 							"options": {
 								"claiming": {
@@ -412,13 +412,13 @@
 							}
 						},
 						"list": {
-							"description": "List categories",
+							"description": "[Support tickets] List categories",
 							"name": "list"
 						}
 					}
 				},
 				"set": {
-					"description": "Set options",
+					"description": "[Support tickets] Set options",
 					"name": "set",
 					"options": {
 						"close_button": {
@@ -484,7 +484,7 @@
 			}
 		},
 		"survey": {
-			"description": "View survey responses",
+			"description": "View ticket survey responses",
 			"name": "survey",
 			"options": {
 				"survey": {
